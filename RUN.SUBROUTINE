@@ -1,0 +1,22 @@
+***************************************************
+  PROGRAM RUN.SUBROUTINE
+***************************************************
+* Alamsyah Rizki Isroi, 20190624
+* simple program which can directly run a subroutine
+* especially for single thread routine
+***************************************************
+  $INSERT I_COMMON
+  $INSERT I_EQUATE
+
+  vRoutineName = ""
+  CRT "Which routine you want to run straighly?":
+  INPUT vRoutineName
+
+  IF vRoutineName NE "" THEN
+    CRT "Calling ":vRoutineName
+    CALL @vRoutineName
+  END
+  
+  RETURN
+  
+END
